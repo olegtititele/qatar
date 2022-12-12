@@ -176,7 +176,7 @@ namespace Parser
             long unixDate = Int64.Parse(_source["refresh"]!.ToString());
             adRegDate = Functions.UnixTimeToDateTime(unixDate);
             
-            if(Functions.CheckAdRegDate(exactTime, adRegDate)){  }else{ return false; }
+//             if(Functions.CheckAdRegDate(exactTime, adRegDate)){  }else{ return false; }
 
             
             // Phone Number
@@ -189,7 +189,7 @@ namespace Parser
                 return true;
             }
             
-            if(Functions.CheckBlacklistAds(userId, sellerPhoneNumber, blacklist)){ }else{ return true; }
+//             if(Functions.CheckBlacklistAds(userId, sellerPhoneNumber, blacklist)){ }else{ return true; }
             
 
             // Ad title
@@ -296,8 +296,8 @@ namespace Parser
             }
             
             
-            if(Functions.CheckSellerRegDate(userSellerRegDate, sellerRegDate)){ }else{ return true; }
-            if(Functions.CheckSellerTotalAds(userSellerTotalAds, sellerTotalAds)){  }else{ return true; }
+//             if(Functions.CheckSellerRegDate(userSellerRegDate, sellerRegDate)){ }else{ return true; }
+//             if(Functions.CheckSellerTotalAds(userSellerTotalAds, sellerTotalAds)){  }else{ return true; }
 
             // Seller Name
             try
@@ -314,7 +314,7 @@ namespace Parser
             }
 
             
-            Functions.AddToBlacklist(userId, userPlatform!, adLink, sellerLink, sellerPhoneNumber);
+//             Functions.AddToBlacklist(userId, userPlatform!, adLink, sellerLink, sellerPhoneNumber);
 
             SendLogToTg(botClient, userId, adLink, adTitle, adDescription, adPrice, adLocation, adImage, adRegDate, sellerPhoneNumber, sellerName, sellerLink, sellerTotalAds, sellerRegDate, sellerType, phoneNumbers);
 
