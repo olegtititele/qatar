@@ -18,14 +18,12 @@ namespace Parser
         public static void StartParsing(ITelegramBotClient botClient, long userId, DateTime userExactTime)
         {
             var options = new FirefoxOptions();
-            // options.AddArgument("--no-sandbox");
-            // options.AddArgument("--disable-dev-shm-usage");
-            // options.AddArgument($"--user-agent={userAgent}");
-            // options.AddArgument("--disable-plugins-discovery");
-            // options.AddArguments("--headless");
+            options.AddArgument("--no-sandbox");
+            options.AddArgument("--disable-dev-shm-usage");
+            options.AddArgument($"--user-agent={userAgent}");
+            options.AddArgument("--disable-plugins-discovery");
+            options.AddArguments("--headless");
             options.SetPreference("permissions.default.image", 2);
-            options.SetPreference("dom.ipc.plugins.enabled.libflashplayer.so", false);
-            // options.AddArguments("--disable-blink-features=AutomationControlled");
             IWebDriver driver = new FirefoxDriver(options);
 
 
