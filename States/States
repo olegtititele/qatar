@@ -1,0 +1,15 @@
+STATE = MainMenu
+STATE = QiwiPayment
+STATE = BtcBanker
+STATE = WhatsappText
+STATE = StartPage
+STATE = BlackList
+STATE = Token
+STATE = CountryLink
+STATE = AdvCount
+STATE = SellerAdvCount
+STATE = SellerRegData
+STATE = AdvRegData
+STATE = Parser
+STATE = StopParser
+STATE = ShowPreviouslyParsed
